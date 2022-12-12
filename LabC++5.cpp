@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <D:\sishka\LabC++5\Header1.h>
+#include "Header1.h"
 using namespace std;
 int main()
 {
