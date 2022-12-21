@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <D:\sishka\LabC++5\Header1.h>
+#include "Header1.h"
 using namespace std;
 int main()
 {
@@ -10,40 +10,40 @@ int main()
 	Room *room1 = &bed1;
 	Room *room2 = &table1;
 	Room *room3 = &carpet1;
-	int b, t, c, i, h;
+	int option1, option2, option3, option4, option5;
 	cout << "Create your dream room: " << endl;
 	do {
 		cout << "Press 1 if you want to add bed" << endl;
-		cin >> b;
+		cin >> option1;
 		cout << "Press 1 if you want to add Table" << endl;
-		cin >> t;
+		cin >> option2;
 		cout << "Press 1 if you want to add Carpet" << endl;
-		cin >> c;
-		if (b == 1)
-			bed1.getLocationB();
-		if (t == 1)
-			table1.getLocationT();
-		if (c == 1)
-			carpet1.getLocationC();
+		cin >> option3;
+		if (option1 == 1)
+			bed1.get_bed_location();
+		if (option2 == 1)
+			table1.get_table_location();
+		if (option3 == 1)
+			carpet1.get_carpet_location();
 		cout << "Your room has:" << endl;
-		if (b == 1)
-			bed1.getBname();
-		if (t == 1)
-			table1.getTname();
-		if (c == 1)
-			carpet1.getCname();
+		if (option1 == 1)
+			bed1.get_bed_name();
+		if (option2 == 1)
+			table1.get_table_name();
+		if (option3 == 1)
+			carpet1.get_carpet_name();
 		cout << "Press 1 if you want to change location " << endl;
-		cin >> i;
-		if (i == 1)
+		cin >> option4;
+		if (option4 == 1)
 			cout << "Enter new location" << endl;
-		if (b == 1)
+		if (option1 == 1)
 			room1->rearregement();
-		if (t == 1)
+		if (option2 == 1)
 			room2->rearregement();
-		if (c == 1)
+		if (option3 == 1)
 			room3->rearregement();
 		cout << "If you want to change all the settings press 0" << endl;
-		cin >> h;
-	} while (h == 0);
+		cin >> option5;
+	} while (option5 == 0);
 	return 0;
 }
